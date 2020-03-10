@@ -3,11 +3,12 @@ package org.launchcode.javawebdevtechjobspersistent.models;
 import javax.persistence.Entity;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Skill extends AbstractEntity {
     @NotBlank
-    @Max(99)
+    @Size(max = 99)
     private String description;
 
     public Skill(String description){
