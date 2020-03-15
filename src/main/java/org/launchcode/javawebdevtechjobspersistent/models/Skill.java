@@ -1,9 +1,11 @@
 package org.launchcode.javawebdevtechjobspersistent.models;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,10 @@ public class Skill extends AbstractEntity {
     }
 
     public Skill(){}
+
+    public List<Job> getJobs() {
+        return jobs;
+    }
 
 
     public String getDescription() {
